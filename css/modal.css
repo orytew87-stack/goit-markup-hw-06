@@ -10,7 +10,11 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
+   
 }
+
+
 
 .backdrop.is-open {
     transition-delay: 0ms;
@@ -25,12 +29,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
-    width: 408px;
-    min-height: 584px;
+    width: 90%;
     background: #FCFCFC;
-    padding: 72px 24px 24px 24px;
+    padding: 72px 15px 24px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+        width: 408px;
+        padding: 72px 24px 24px;
+    }
 }
 
 .backdrop.is-open .modal {
@@ -78,10 +86,6 @@
 }
 
 .modal-caption {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
     margin-bottom: 16px;
@@ -110,7 +114,6 @@
     border-radius: 4px;
     padding: 8px 38px;
     height: 40px;
-    max-width: 360px;
     color: #2E2F42;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,6 +164,9 @@
 }
 
 .modal-form-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     line-height: 1.7;
     letter-spacing: 0.04em;
     color: #8E8F99;
@@ -175,7 +181,7 @@
     align-items: center;
     justify-content: center;
     fill: transparent;
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
@@ -184,8 +190,6 @@
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     flex-shrink: 0;
-    margin-right: 8px;
-
 }
 
 .modal-form-link {

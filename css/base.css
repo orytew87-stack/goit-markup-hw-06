@@ -21,6 +21,10 @@ body {
     letter-spacing: 0.02em;
     font-weight: 500;
 }
+body:has(.backdrop.is-open),
+body:has(.mobile-menu.is-open) {
+    overflow: hidden;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;

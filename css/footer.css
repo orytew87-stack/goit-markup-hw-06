@@ -136,5 +136,9 @@
 .footer-social-container {
     @media screen and (min-width: 1158px) {
         margin-right: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
         }
 }
