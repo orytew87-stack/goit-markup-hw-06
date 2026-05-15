@@ -1,0 +1,18 @@
+.header .container {
+    display: flex;
+    align-items: center;
+   
+    height: 100%;
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+    }
+}
+
+.header {
+    height: 56px;
+    border-bottom: 1px solid #e7e9fc;
+    
+    @media screen and (min-width: 768px) {
+            height:72px;
+            }
+}
