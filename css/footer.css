@@ -1,27 +1,29 @@
-.footer{
+
+.footer {
     background-color: #2e2f42;
     padding: 96px 0;
-    @media screen and (min-width: 1158px) {
-            padding: 100px 0;
-        }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+}
+
+.footer-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-text {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--cloud);
-    text-align: center;
-    /*max-width: 264px;*/
-}
-.footer-logo-container {
-    @media screen and (min-width: 1158px) {
-         margin-right: 120px;
-        }
-    @media screen and (min-width: 768px) {
-        width: 264px;
-        }
+    color: #F4F4FD;
+    max-width: 264px;
+    margin-top: 16px;
 }
 
 .footer-social-text,
@@ -32,10 +34,7 @@
     letter-spacing: 0.02em;
     color: #FFFFFF;
     margin-bottom: 16px;
-    
-    @media screen and (max-width: 767px) {
     text-align: center;
-        }
 }
 
 .footer-list {
@@ -43,44 +42,32 @@
     gap: 16px;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
-    align-items: center;
 
-    @media screen and (min-width: 768px) {
-           flex-direction: row;
-           flex-wrap: wrap;
-           
-           align-items: baseline;
-        }
-    @media screen and (min-width: 768px) and (max-width: 1157px) {
-           padding: 0 108px;
-    }
-    @media screen and (max-width: 1158px) {
-        gap: 72px 24px;
-    }
+.footer-subscribe {
+    width: 100%;
 }
 
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
 
 .subscribe-input {
     width: 100%;
     height: 40px;
     border: 1px solid #ffffff;
     background-color: transparent;
+    border-radius: 4px;
+    padding: 8px 16px;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    padding:8px 16px;
     color: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
     outline: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (min-width: 768px) {
-         width: 264px;
-        }
 }
 
 .subscribe-input:focus {
@@ -101,10 +88,11 @@
     color: #ffffff;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button:hover,
@@ -117,28 +105,56 @@
     fill: #ffffff;
 }
 
-.subscribe-form {
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 72px 24px;
+        padding-left: 108px;
+    }
+
+    .footer-logo-container {
+        align-items: flex-start;
+        
+    }
+
+    .footer-text {
+        text-align: left;
+    }
+
+    .footer-social-text,
+    .footer-title {
+        text-align: left;
+    }
+
+    .subscribe-form {
         flex-direction: row;
         gap: 24px;
-        }
+    }
+
+    .subscribe-input {
+        width: 264px;
+    }
 }
-.subscribe-label {
-    width: 100%;
-}
-.footer-subscribe {
-    width: 100%;
-}
-.footer-social-container {
-    @media screen and (min-width: 1158px) {
-        margin-right: auto;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        }
+
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer-container {
+        flex-wrap: nowrap;
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 0;
+    }
+
+    .footer-logo-container {
+        margin-right: 120px;
+    }
+
+    .footer-social-container {
+        margin-right: 80px;
+    }
 }
